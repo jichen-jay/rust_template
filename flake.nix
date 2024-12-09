@@ -18,6 +18,15 @@
       });
     in
     {
+      templates.default = {
+        path = ./.;
+        description = "Rust development environment with WASM support";
+        welcomeText = ''
+          # Rust Development Environment
+          Run `nix develop` to enter the development shell.
+        '';
+      };
+
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
