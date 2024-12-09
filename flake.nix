@@ -18,7 +18,7 @@
       });
     in
     {
-      templates.default = {
+      defaultTemplate = {
         path = ./.;
         description = "Rust development environment with WASM support";
         welcomeText = ''
